@@ -1,0 +1,23 @@
+nav {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  justify-content: flex-end;
+  padding-right: 5rem;
+  font-size: 16px;
+  gap: 2rem;
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: #f0f0f0;
+  }
+
+  .active-link {
+    color: blue;
+    width: max-content;
+    text-decoration: underline; /* Add this line */
+  }
+}
