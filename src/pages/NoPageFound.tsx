@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const NoPageFound = () => {
+const NoPageFound = () => {
   const divContainerStyle = {
     display: "flex",
     flexDirection: "column",
@@ -17,3 +17,4 @@ export const NoPageFound = () => {
     </div>
   );
 };
+export default NoPageFound;
