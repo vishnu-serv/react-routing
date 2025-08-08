@@ -61,31 +61,37 @@ const AdminDashoboard = () => {
         Log Out
       </button>
 
-      <table
-        style={{
-          width: "100%",
-          borderCollapse: "collapse",
-        }}
-      >
-        <thead>
-          <tr>
-            <th style={thStyle}>id</th>
-            <th style={thStyle}>Name</th>
-            <th style={thStyle}>Email</th>
-            <th style={thStyle}>Role</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user) => (
-            <tr key={user.id}>
-              <td style={tdStyle}>{user.id}</td>
-              <td style={tdStyle}>{user.name}</td>
-              <td style={tdStyle}>{user.email}</td>
-              <td style={tdStyle}>{user.role}</td>
+      {users.length > 0 ? (
+        <table
+          style={{
+            width: "100%",
+            borderCollapse: "collapse",
+          }}
+        >
+          <thead>
+            <tr>
+              <th style={thStyle}>id</th>
+              <th style={thStyle}>Name</th>
+              <th style={thStyle}>Email</th>
+              <th style={thStyle}>Role</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {users.map((user) => (
+              <tr key={user.id}>
+                <td style={tdStyle}>{user.id}</td>
+                <td style={tdStyle}>{user.name}</td>
+                <td style={tdStyle}>{user.email}</td>
+                <td style={tdStyle}>{user.role}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <div>
+          <h2>No Users</h2>
+        </div>
+      )}
     </div>
   );
 };
